@@ -3,11 +3,13 @@
 cd "$(dirname "$0")"
 
 # Download main dotfiles
-git submodule init
-git submodule update
+git submodule update --init --recursive
 
-/bin/sh .dotfiles/install.sh
-
+# Link things
+ln -s -f .dotfiles/.config/nvim /home/gitpod/.config/nvim
+ln -s -f .dotfiles/.config/fish /home/gitpod/.config/fish
+ln -s -f .dotfiles/.tmux.conf /home/gitpod/.tmux.conf
+ln -s -f .dotfiles/.tmux.conf.local /home/gitpod/.tmux.conf.local
 
 # Install neovim
 cd $(mktemp -d)
