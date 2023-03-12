@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Download main dotfiles
+git submodule init
+git submodule update
+
 /bin/sh .dotfiles/install.sh
 
 
