@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd "$(dirname "$0")"
+
 # Download main dotfiles
 git submodule init
 git submodule update
