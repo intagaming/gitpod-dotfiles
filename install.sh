@@ -24,5 +24,5 @@ curl -LO "$URL"
 chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract >/dev/null
 mkdir -p /home/gitpod/.local/bin
-ln -s $(pwd)/squashfs-root/AppRun /home/gitpod/.local/bin/nvim
+ln -s -f $(pwd)/squashfs-root/AppRun /home/gitpod/.local/bin/nvim
 
